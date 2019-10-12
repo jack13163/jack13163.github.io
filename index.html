@@ -163,6 +163,131 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-idea运行javaweb项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/13/idea运行javaweb项目/">【idea】运行并部署maven环境下的javaweb项目</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/13/idea运行javaweb项目/" class="archive-article-date">
+  	<time datetime="2019-10-12T17:57:15.998Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>笔者由于eclipse突然罢工，开始转战idea，刚开始有点不适应，真的折腾，这里记录一下自己的一点心得，如有问题，欢迎留言区评论，谢谢大家的支持。</p>
+<h1 id="1-idea下javaweb项目的目录结构"><a href="#1-idea下javaweb项目的目录结构" class="headerlink" title="1. idea下javaweb项目的目录结构"></a>1. idea下javaweb项目的目录结构</h1><p>idea下的目录结构如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013020353.png" alt></p>
+<h1 id="2-配置项目属性"><a href="#2-配置项目属性" class="headerlink" title="2. 配置项目属性"></a>2. 配置项目属性</h1><h2 id="2-1-配置Project属性"><a href="#2-1-配置Project属性" class="headerlink" title="2.1 配置Project属性"></a>2.1 配置Project属性</h2><p>点击下图所示的按钮</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013020738.png" alt></p>
+<p>会看到如下的项目属性窗口</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013021104.png" alt></p>
+<ol>
+<li>java jdk的路径：笔者设置的是自己本地的jdk；</li>
+<li>选择SDK default：具体原因未知；</li>
+<li>临时编译输出路径：临时输出路径，不是最终生成的web项目路径。</li>
+</ol>
+<h2 id="2-2-配置Modules属性"><a href="#2-2-配置Modules属性" class="headerlink" title="2.2 配置Modules属性"></a>2.2 配置Modules属性</h2><ol>
+<li>点击加号可以为一个module增加框架，这是让idea识别它是一个什么项目；</li>
+<li>最常用的web项目，添加以后会自动填写的根目录路径、web.xml的路径等。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013021654.png" alt></p>
+<p>注：有时候会不准确，需要再自己调整一下。</p>
+<h3 id="2-2-1-Sources配置"><a href="#2-2-1-Sources配置" class="headerlink" title="2.2.1 Sources配置"></a>2.2.1 Sources配置</h3><p>我们需要告诉idea，源码文件、测试文件和资源文件分别在哪个文件夹中，如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013022405.png" alt></p>
+<h3 id="2-2-2-Paths"><a href="#2-2-2-Paths" class="headerlink" title="2.2.2 Paths"></a>2.2.2 Paths</h3><p>这里选择Use module compile output path，这里只要选择一个最开始我们设置的临时编译输出总路径下即可：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013022732.png" alt></p>
+<h3 id="2-2-3-Dependencies"><a href="#2-2-3-Dependencies" class="headerlink" title="2.2.3 Dependencies"></a>2.2.3 Dependencies</h3><p>这里因为笔者是为了利用maven管理jar包而建立的maven项目，因此，多了很多maven依赖。</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013022930.png" alt></p>
+<h2 id="2-3-Libraries"><a href="#2-3-Libraries" class="headerlink" title="2.3 Libraries"></a>2.3 Libraries</h2><p>这里主要就是一下jar包。</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013023251.png" alt></p>
+<h2 id="2-5-Facets"><a href="#2-5-Facets" class="headerlink" title="2.5 Facets"></a>2.5 Facets</h2><h3 id="2-5-1-Spring设置"><a href="#2-5-1-Spring设置" class="headerlink" title="2.5.1 Spring设置"></a>2.5.1 Spring设置</h3><p>您需要告诉idea您的spring配置文件所在的位置，具体配置方法如下：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013023908.png" alt></p>
+<h3 id="2-5-2-Web配置"><a href="#2-5-2-Web配置" class="headerlink" title="2.5.2 Web配置"></a>2.5.2 Web配置</h3><p>这里需要进行以下设置：</p>
+<ol>
+<li>Web Resource Directory为当前项目的webapp目录；</li>
+<li>Source Roots中勾选java代码目录和resource资源目录。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013023451.png" alt></p>
+<h2 id="2-6-Artifacts"><a href="#2-6-Artifacts" class="headerlink" title="2.6 Artifacts"></a>2.6 Artifacts</h2><p>这个非常重要!!!</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013024418.png" alt></p>
+<h3 id="2-6-1-添加Artifacts"><a href="#2-6-1-添加Artifacts" class="headerlink" title="2.6.1 添加Artifacts"></a>2.6.1 添加Artifacts</h3><p>选择加号 –&gt; Web Application: Exploded –&gt; From Module –&gt; Select Modules:</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013024729.png" alt></p>
+<h3 id="2-6-2-添加Web-INF目录信息和Fact资源"><a href="#2-6-2-添加Web-INF目录信息和Fact资源" class="headerlink" title="2.6.2 添加Web-INF目录信息和Fact资源"></a>2.6.2 添加Web-INF目录信息和Fact资源</h3><p>点击加号，依次点击Directory Content和JavaEE Fact Resource</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013025247.png" alt></p>
+<h3 id="2-6-3-添加部署路径"><a href="#2-6-3-添加部署路径" class="headerlink" title="2.6.3 添加部署路径"></a>2.6.3 添加部署路径</h3><p>需要注意的是，之前的临时输出路径并不是最终部署的路径，最终的路径定义是<code>C:\code\javawebapps\jshop</code>，生成的项目如下图所示。</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013025726.png" alt></p>
+<h1 id="3-在Tomcat上运行"><a href="#3-在Tomcat上运行" class="headerlink" title="3. 在Tomcat上运行"></a>3. 在Tomcat上运行</h1><p>首先，打开如下所示的界面：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013030439.png" alt></p>
+<p>接着，依次点击加号 –&gt; Tomcat Server –&gt; Local，可以看到如下图所示的界面：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013030139.png" alt></p>
+<p>这里，我们可以更改一下访问的URL，同时，设置更新操作，每次编译时自动更新生成的class文件：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013030710.png" alt></p>
+<p>同时，设置部署信息，将Application context设置为前面的URL相对应的名称，即javaweb的项目名称：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013031326.png" alt></p>
+<p>最后，运行之后可以看到成功执行的结果：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013030940.png" alt></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ssm,maven</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/13/idea运行javaweb项目/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-双折线图和双柱形图混合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -754,6 +879,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ssm,maven</a>
               </li>
             
             <div class="clearfix"></div>

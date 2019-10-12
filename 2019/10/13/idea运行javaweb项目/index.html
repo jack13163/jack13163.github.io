@@ -6,23 +6,40 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog">
-  <title>git实现免密操作 | CallMejacky&#39;s blog</title>
+  <title>【idea】运行并部署maven环境下的javaweb项目 | CallMejacky&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用ssh密钥，如果有人可以访问您的计算机，他们也可以访问使用该密钥的每个系统。为了保证安全，可以向ssh密钥中添加密码。通过ssh代理来安全地保存您的密码，这样就不必重新输入它。">
-<meta name="keywords" content="git">
+  <meta name="description" content="笔者由于eclipse突然罢工，开始转战idea，刚开始有点不适应，真的折腾，这里记录一下自己的一点心得，如有问题，欢迎留言区评论，谢谢大家的支持。 1. idea下javaweb项目的目录结构idea下的目录结构如下图所示：  2. 配置项目属性2.1 配置Project属性点击下图所示的按钮  会看到如下的项目属性窗口   java jdk的路径：笔者设置的是自己本地的jdk； 选择SDK d">
+<meta name="keywords" content="ssm,maven">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git实现免密操作">
-<meta property="og:url" content="https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog/2019/10/02/git实现免密操作/index.html">
+<meta property="og:title" content="【idea】运行并部署maven环境下的javaweb项目">
+<meta property="og:url" content="https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog/2019/10/13/idea运行javaweb项目/index.html">
 <meta property="og:site_name" content="CallMejacky&#39;s blog">
-<meta property="og:description" content="使用ssh密钥，如果有人可以访问您的计算机，他们也可以访问使用该密钥的每个系统。为了保证安全，可以向ssh密钥中添加密码。通过ssh代理来安全地保存您的密码，这样就不必重新输入它。">
+<meta property="og:description" content="笔者由于eclipse突然罢工，开始转战idea，刚开始有点不适应，真的折腾，这里记录一下自己的一点心得，如有问题，欢迎留言区评论，谢谢大家的支持。 1. idea下javaweb项目的目录结构idea下的目录结构如下图所示：  2. 配置项目属性2.1 配置Project属性点击下图所示的按钮  会看到如下的项目属性窗口   java jdk的路径：笔者设置的是自己本地的jdk； 选择SDK d">
 <meta property="og:locale" content="zh-Hans                	//中文，汉字">
-<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191002235702.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191003001039.png">
-<meta property="og:updated_time" content="2019-10-02T19:46:57.036Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013020353.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013020738.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013021104.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013021654.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013022405.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013022732.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013022930.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013023251.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013023908.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013023451.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013024418.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013024729.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013025247.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013025726.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013030439.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013030139.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013030710.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013031326.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013030940.png">
+<meta property="og:updated_time" content="2019-10-12T19:26:02.508Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git实现免密操作">
-<meta name="twitter:description" content="使用ssh密钥，如果有人可以访问您的计算机，他们也可以访问使用该密钥的每个系统。为了保证安全，可以向ssh密钥中添加密码。通过ssh代理来安全地保存您的密码，这样就不必重新输入它。">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191002235702.png">
+<meta name="twitter:title" content="【idea】运行并部署maven环境下的javaweb项目">
+<meta name="twitter:description" content="笔者由于eclipse突然罢工，开始转战idea，刚开始有点不适应，真的折腾，这里记录一下自己的一点心得，如有问题，欢迎留言区评论，谢谢大家的支持。 1. idea下javaweb项目的目录结构idea下的目录结构如下图所示：  2. 配置项目属性2.1 配置Project属性点击下图所示的按钮  会看到如下的项目属性窗口   java jdk的路径：笔者设置的是自己本地的jdk； 选择SDK d">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013020353.png">
   
     <link rel="alternative" href="/atom.xml" title="CallMejacky&#39;s blog" type="application/atom+xml">
   
@@ -166,47 +183,78 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git实现免密操作" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-idea运行javaweb项目" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      git实现免密操作
+      【idea】运行并部署maven环境下的javaweb项目
     </h1>
   
 
         
-        <a href="/2019/10/02/git实现免密操作/" class="archive-article-date">
-  	<time datetime="2019-10-02T15:28:08.028Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-02</time>
+        <a href="/2019/10/13/idea运行javaweb项目/" class="archive-article-date">
+  	<time datetime="2019-10-12T17:57:15.998Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>使用ssh密钥，如果有人可以访问您的计算机，他们也可以访问使用该密钥的每个系统。为了保证安全，可以向ssh密钥中添加密码。通过ssh代理来安全地保存您的密码，这样就不必重新输入它。</p>
-<a id="more"></a>
-
-<h2 id="1-添加或更改秘钥短语"><a href="#1-添加或更改秘钥短语" class="headerlink" title="1.添加或更改秘钥短语"></a>1.添加或更改秘钥短语</h2><p>可以通过键入以下命令来更改现有私钥的密码，而不必重新生成密钥对：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh-keygen -p</span></span><br></pre></td></tr></table></figure>
-
-<p>如果您的密钥已经有一个密码，则在您可以更改为新密码之前，系统会提示您输入密码。否则，您可以添加新的密码到秘钥中。会出现如下提示内容，请按照<code>[]</code>中的内容操作：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Start the SSH key creation process</span><br><span class="line">Enter file in which the key is (/Users/you/.ssh/id_rsa): [回车]</span><br><span class="line">Key has comment &apos;/Users/you/.ssh/id_rsa&apos;</span><br><span class="line">Enter new passphrase (empty for no passphrase): [输入您的密码]</span><br><span class="line">Enter same passphrase again: [再次输入密码]</span><br><span class="line">Your identification has been saved with the new passphrase.</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-在git上自动启动ssh代理"><a href="#2-在git上自动启动ssh代理" class="headerlink" title="2.在git上自动启动ssh代理"></a>2.在git上自动启动ssh代理</h2><ul>
-<li><p>Github桌面应用程序用户：则请忽略本节操作，因为Github桌面自动为您启动SSH代理。</p>
-</li>
-<li><p>Git shell用户：请按照以下步骤自动运行SSH代理。</p>
-</li>
-</ul>
-<p>首先，将下面的内容复制到粘贴到您的电脑上的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```bash</span><br><span class="line">env=~/.ssh/agent.env</span><br><span class="line"></span><br><span class="line">agent_load_env () &#123; test -f &quot;$env&quot; &amp;&amp; . &quot;$env&quot; &gt;| /dev/null ; &#125;</span><br><span class="line"></span><br><span class="line">agent_start () &#123;</span><br><span class="line">    (umask 077; ssh-agent &gt;| &quot;$env&quot;)</span><br><span class="line">    . &quot;$env&quot; &gt;| /dev/null ; &#125;</span><br><span class="line"></span><br><span class="line">agent_load_env</span><br><span class="line"></span><br><span class="line"># agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2= agent not running</span><br><span class="line">agent_run_state=$(ssh-add -l &gt;| /dev/null 2&gt;&amp;1; echo $?)</span><br><span class="line"></span><br><span class="line">if [ ! &quot;$SSH_AUTH_SOCK&quot; ] || [ $agent_run_state = 2 ]; then</span><br><span class="line">    agent_start</span><br><span class="line">    ssh-add</span><br><span class="line">elif [ &quot;$SSH_AUTH_SOCK&quot; ] &amp;&amp; [ $agent_run_state = 1 ]; then</span><br><span class="line">    ssh-add</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">unset env</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191002235702.png" alt></p>
-<p>如果您的<strong>私钥不存储在默认位置之一</strong>（<code>~/.ssh/id_rsa</code>或<code>~/.ssh/id_dsa</code>）中，则需要告诉您的SSH身份验证代理在哪里找到它。要向SSH代理添加密钥，请键入<code>ssh-add ~/path/to/my_key</code>。有关更多信息，请参见“<a href="https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank" rel="noopener">生成一个新的SSH密钥并将其添加到SSH代理</a>”。</p>
-<p>这里，如果此时我们重新打开一个git bash，可以看到：</p>
-<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191003001039.png" alt></p>
-<p>本文翻译自：<a href="https://help.github.com/en/articles/working-with-ssh-key-passphrases" target="_blank" rel="noopener">Working with SSH key passphrases</a></p>
+        <p>笔者由于eclipse突然罢工，开始转战idea，刚开始有点不适应，真的折腾，这里记录一下自己的一点心得，如有问题，欢迎留言区评论，谢谢大家的支持。</p>
+<h1 id="1-idea下javaweb项目的目录结构"><a href="#1-idea下javaweb项目的目录结构" class="headerlink" title="1. idea下javaweb项目的目录结构"></a>1. idea下javaweb项目的目录结构</h1><p>idea下的目录结构如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013020353.png" alt></p>
+<h1 id="2-配置项目属性"><a href="#2-配置项目属性" class="headerlink" title="2. 配置项目属性"></a>2. 配置项目属性</h1><h2 id="2-1-配置Project属性"><a href="#2-1-配置Project属性" class="headerlink" title="2.1 配置Project属性"></a>2.1 配置Project属性</h2><p>点击下图所示的按钮</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013020738.png" alt></p>
+<p>会看到如下的项目属性窗口</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013021104.png" alt></p>
+<ol>
+<li>java jdk的路径：笔者设置的是自己本地的jdk；</li>
+<li>选择SDK default：具体原因未知；</li>
+<li>临时编译输出路径：临时输出路径，不是最终生成的web项目路径。</li>
+</ol>
+<h2 id="2-2-配置Modules属性"><a href="#2-2-配置Modules属性" class="headerlink" title="2.2 配置Modules属性"></a>2.2 配置Modules属性</h2><ol>
+<li>点击加号可以为一个module增加框架，这是让idea识别它是一个什么项目；</li>
+<li>最常用的web项目，添加以后会自动填写的根目录路径、web.xml的路径等。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013021654.png" alt></p>
+<p>注：有时候会不准确，需要再自己调整一下。</p>
+<h3 id="2-2-1-Sources配置"><a href="#2-2-1-Sources配置" class="headerlink" title="2.2.1 Sources配置"></a>2.2.1 Sources配置</h3><p>我们需要告诉idea，源码文件、测试文件和资源文件分别在哪个文件夹中，如下图所示：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013022405.png" alt></p>
+<h3 id="2-2-2-Paths"><a href="#2-2-2-Paths" class="headerlink" title="2.2.2 Paths"></a>2.2.2 Paths</h3><p>这里选择Use module compile output path，这里只要选择一个最开始我们设置的临时编译输出总路径下即可：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013022732.png" alt></p>
+<h3 id="2-2-3-Dependencies"><a href="#2-2-3-Dependencies" class="headerlink" title="2.2.3 Dependencies"></a>2.2.3 Dependencies</h3><p>这里因为笔者是为了利用maven管理jar包而建立的maven项目，因此，多了很多maven依赖。</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013022930.png" alt></p>
+<h2 id="2-3-Libraries"><a href="#2-3-Libraries" class="headerlink" title="2.3 Libraries"></a>2.3 Libraries</h2><p>这里主要就是一下jar包。</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013023251.png" alt></p>
+<h2 id="2-5-Facets"><a href="#2-5-Facets" class="headerlink" title="2.5 Facets"></a>2.5 Facets</h2><h3 id="2-5-1-Spring设置"><a href="#2-5-1-Spring设置" class="headerlink" title="2.5.1 Spring设置"></a>2.5.1 Spring设置</h3><p>您需要告诉idea您的spring配置文件所在的位置，具体配置方法如下：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013023908.png" alt></p>
+<h3 id="2-5-2-Web配置"><a href="#2-5-2-Web配置" class="headerlink" title="2.5.2 Web配置"></a>2.5.2 Web配置</h3><p>这里需要进行以下设置：</p>
+<ol>
+<li>Web Resource Directory为当前项目的webapp目录；</li>
+<li>Source Roots中勾选java代码目录和resource资源目录。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013023451.png" alt></p>
+<h2 id="2-6-Artifacts"><a href="#2-6-Artifacts" class="headerlink" title="2.6 Artifacts"></a>2.6 Artifacts</h2><p>这个非常重要!!!</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013024418.png" alt></p>
+<h3 id="2-6-1-添加Artifacts"><a href="#2-6-1-添加Artifacts" class="headerlink" title="2.6.1 添加Artifacts"></a>2.6.1 添加Artifacts</h3><p>选择加号 –&gt; Web Application: Exploded –&gt; From Module –&gt; Select Modules:</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013024729.png" alt></p>
+<h3 id="2-6-2-添加Web-INF目录信息和Fact资源"><a href="#2-6-2-添加Web-INF目录信息和Fact资源" class="headerlink" title="2.6.2 添加Web-INF目录信息和Fact资源"></a>2.6.2 添加Web-INF目录信息和Fact资源</h3><p>点击加号，依次点击Directory Content和JavaEE Fact Resource</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013025247.png" alt></p>
+<h3 id="2-6-3-添加部署路径"><a href="#2-6-3-添加部署路径" class="headerlink" title="2.6.3 添加部署路径"></a>2.6.3 添加部署路径</h3><p>需要注意的是，之前的临时输出路径并不是最终部署的路径，最终的路径定义是<code>C:\code\javawebapps\jshop</code>，生成的项目如下图所示。</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013025726.png" alt></p>
+<h1 id="3-在Tomcat上运行"><a href="#3-在Tomcat上运行" class="headerlink" title="3. 在Tomcat上运行"></a>3. 在Tomcat上运行</h1><p>首先，打开如下所示的界面：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013030439.png" alt></p>
+<p>接着，依次点击加号 –&gt; Tomcat Server –&gt; Local，可以看到如下图所示的界面：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013030139.png" alt></p>
+<p>这里，我们可以更改一下访问的URL，同时，设置更新操作，每次编译时自动更新生成的class文件：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013030710.png" alt></p>
+<p>同时，设置部署信息，将Application context设置为前面的URL相对应的名称，即javaweb的项目名称：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013031326.png" alt></p>
+<p>最后，运行之后可以看到成功执行的结果：</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191013030940.png" alt></p>
 
       
 
@@ -241,7 +289,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ssm,maven</a>
         		</li>
       		
 		</ul>
@@ -297,7 +345,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog/2019/10/02/git实现免密操作/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog/2019/10/13/idea运行javaweb项目/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -311,18 +359,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/03/hexo博客基础信息设置/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hexo博客网站的基本设置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/01/使用Typora离线写博客并发布到CSDN/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">使用Typora离线写博客并发布到CSDN</div>
+    <a href="/2019/10/10/双折线图和双柱形图混合/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【matlab】双折线图和双柱形图混合绘图</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -349,7 +388,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-添加或更改秘钥短语"><span class="toc-number">1.</span> <span class="toc-text">1.添加或更改秘钥短语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-在git上自动启动ssh代理"><span class="toc-number">2.</span> <span class="toc-text">2.在git上自动启动ssh代理</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-idea下javaweb项目的目录结构"><span class="toc-number">1.</span> <span class="toc-text">1. idea下javaweb项目的目录结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-配置项目属性"><span class="toc-number">2.</span> <span class="toc-text">2. 配置项目属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-配置Project属性"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 配置Project属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-配置Modules属性"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 配置Modules属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-Sources配置"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1 Sources配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-Paths"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2 Paths</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-Dependencies"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.2.3 Dependencies</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Libraries"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Libraries</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-Facets"><span class="toc-number">2.4.</span> <span class="toc-text">2.5 Facets</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-1-Spring设置"><span class="toc-number">2.4.1.</span> <span class="toc-text">2.5.1 Spring设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-2-Web配置"><span class="toc-number">2.4.2.</span> <span class="toc-text">2.5.2 Web配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-Artifacts"><span class="toc-number">2.5.</span> <span class="toc-text">2.6 Artifacts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-1-添加Artifacts"><span class="toc-number">2.5.1.</span> <span class="toc-text">2.6.1 添加Artifacts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-2-添加Web-INF目录信息和Fact资源"><span class="toc-number">2.5.2.</span> <span class="toc-text">2.6.2 添加Web-INF目录信息和Fact资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-3-添加部署路径"><span class="toc-number">2.5.3.</span> <span class="toc-text">2.6.3 添加部署路径</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-在Tomcat上运行"><span class="toc-number">3.</span> <span class="toc-text">3. 在Tomcat上运行</span></a></li></ol>
                     </div>
                 </span>
             </div>

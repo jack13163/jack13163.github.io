@@ -6,23 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog">
-  <title>git实现免密操作 | CallMejacky&#39;s blog</title>
+  <title>Tag: ssm,maven | CallMejacky&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用ssh密钥，如果有人可以访问您的计算机，他们也可以访问使用该密钥的每个系统。为了保证安全，可以向ssh密钥中添加密码。通过ssh代理来安全地保存您的密码，这样就不必重新输入它。">
-<meta name="keywords" content="git">
-<meta property="og:type" content="article">
-<meta property="og:title" content="git实现免密操作">
-<meta property="og:url" content="https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog/2019/10/02/git实现免密操作/index.html">
+  <meta name="description" content="This is a blog in order to record my learning and growth.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CallMejacky&#39;s blog">
+<meta property="og:url" content="https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog/tags/ssm-maven/index.html">
 <meta property="og:site_name" content="CallMejacky&#39;s blog">
-<meta property="og:description" content="使用ssh密钥，如果有人可以访问您的计算机，他们也可以访问使用该密钥的每个系统。为了保证安全，可以向ssh密钥中添加密码。通过ssh代理来安全地保存您的密码，这样就不必重新输入它。">
+<meta property="og:description" content="This is a blog in order to record my learning and growth.">
 <meta property="og:locale" content="zh-Hans                	//中文，汉字">
-<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191002235702.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191003001039.png">
-<meta property="og:updated_time" content="2019-10-02T19:46:57.036Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git实现免密操作">
-<meta name="twitter:description" content="使用ssh密钥，如果有人可以访问您的计算机，他们也可以访问使用该密钥的每个系统。为了保证安全，可以向ssh密钥中添加密码。通过ssh代理来安全地保存您的密码，这样就不必重新输入它。">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191002235702.png">
+<meta name="twitter:title" content="CallMejacky&#39;s blog">
+<meta name="twitter:description" content="This is a blog in order to record my learning and growth.">
   
     <link rel="alternative" href="/atom.xml" title="CallMejacky&#39;s blog" type="application/atom+xml">
   
@@ -166,209 +161,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git实现免密操作" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      git实现免密操作
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/10/13/idea运行javaweb项目/" class="archive-article-date">
+  	<time datetime="2019-10-12T17:57:15.998Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/10/13/idea运行javaweb项目/">【idea】运行并部署maven环境下的javaweb项目</a>
     </h1>
   
 
-        
-        <a href="/2019/10/02/git实现免密操作/" class="archive-article-date">
-  	<time datetime="2019-10-02T15:28:08.028Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>使用ssh密钥，如果有人可以访问您的计算机，他们也可以访问使用该密钥的每个系统。为了保证安全，可以向ssh密钥中添加密码。通过ssh代理来安全地保存您的密码，这样就不必重新输入它。</p>
-<a id="more"></a>
-
-<h2 id="1-添加或更改秘钥短语"><a href="#1-添加或更改秘钥短语" class="headerlink" title="1.添加或更改秘钥短语"></a>1.添加或更改秘钥短语</h2><p>可以通过键入以下命令来更改现有私钥的密码，而不必重新生成密钥对：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh-keygen -p</span></span><br></pre></td></tr></table></figure>
-
-<p>如果您的密钥已经有一个密码，则在您可以更改为新密码之前，系统会提示您输入密码。否则，您可以添加新的密码到秘钥中。会出现如下提示内容，请按照<code>[]</code>中的内容操作：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Start the SSH key creation process</span><br><span class="line">Enter file in which the key is (/Users/you/.ssh/id_rsa): [回车]</span><br><span class="line">Key has comment &apos;/Users/you/.ssh/id_rsa&apos;</span><br><span class="line">Enter new passphrase (empty for no passphrase): [输入您的密码]</span><br><span class="line">Enter same passphrase again: [再次输入密码]</span><br><span class="line">Your identification has been saved with the new passphrase.</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-在git上自动启动ssh代理"><a href="#2-在git上自动启动ssh代理" class="headerlink" title="2.在git上自动启动ssh代理"></a>2.在git上自动启动ssh代理</h2><ul>
-<li><p>Github桌面应用程序用户：则请忽略本节操作，因为Github桌面自动为您启动SSH代理。</p>
-</li>
-<li><p>Git shell用户：请按照以下步骤自动运行SSH代理。</p>
-</li>
-</ul>
-<p>首先，将下面的内容复制到粘贴到您的电脑上的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```bash</span><br><span class="line">env=~/.ssh/agent.env</span><br><span class="line"></span><br><span class="line">agent_load_env () &#123; test -f &quot;$env&quot; &amp;&amp; . &quot;$env&quot; &gt;| /dev/null ; &#125;</span><br><span class="line"></span><br><span class="line">agent_start () &#123;</span><br><span class="line">    (umask 077; ssh-agent &gt;| &quot;$env&quot;)</span><br><span class="line">    . &quot;$env&quot; &gt;| /dev/null ; &#125;</span><br><span class="line"></span><br><span class="line">agent_load_env</span><br><span class="line"></span><br><span class="line"># agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2= agent not running</span><br><span class="line">agent_run_state=$(ssh-add -l &gt;| /dev/null 2&gt;&amp;1; echo $?)</span><br><span class="line"></span><br><span class="line">if [ ! &quot;$SSH_AUTH_SOCK&quot; ] || [ $agent_run_state = 2 ]; then</span><br><span class="line">    agent_start</span><br><span class="line">    ssh-add</span><br><span class="line">elif [ &quot;$SSH_AUTH_SOCK&quot; ] &amp;&amp; [ $agent_run_state = 1 ]; then</span><br><span class="line">    ssh-add</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">unset env</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191002235702.png" alt></p>
-<p>如果您的<strong>私钥不存储在默认位置之一</strong>（<code>~/.ssh/id_rsa</code>或<code>~/.ssh/id_dsa</code>）中，则需要告诉您的SSH身份验证代理在哪里找到它。要向SSH代理添加密钥，请键入<code>ssh-add ~/path/to/my_key</code>。有关更多信息，请参见“<a href="https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank" rel="noopener">生成一个新的SSH密钥并将其添加到SSH代理</a>”。</p>
-<p>这里，如果此时我们重新打开一个git bash，可以看到：</p>
-<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191003001039.png" alt></p>
-<p>本文翻译自：<a href="https://help.github.com/en/articles/working-with-ssh-key-passphrases" target="_blank" rel="noopener">Working with SSH key passphrases</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ssm,maven</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog/2019/10/02/git实现免密操作/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/10/03/hexo博客基础信息设置/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hexo博客网站的基本设置
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/10/01/使用Typora离线写博客并发布到CSDN/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">使用Typora离线写博客并发布到CSDN</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-添加或更改秘钥短语"><span class="toc-number">1.</span> <span class="toc-text">1.添加或更改秘钥短语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-在git上自动启动ssh代理"><span class="toc-number">2.</span> <span class="toc-text">2.在git上自动启动ssh代理</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -391,9 +237,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
