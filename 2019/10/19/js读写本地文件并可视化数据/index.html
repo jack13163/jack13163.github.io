@@ -6,18 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog">
-  <title>Tag: hexo | CallMejacky&#39;s blog</title>
+  <title>利用Echarts实现数据可视化 | CallMejacky&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is a blog in order to record my learning and growth.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CallMejacky&#39;s blog">
-<meta property="og:url" content="https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog/tags/hexo/index.html">
+  <meta name="description" content="最近由于一个特殊的需求，需要利用js读取本地json，然后再通过Echarts可视化出来。之前没有做过js读写本地文件的实验，幸亏看到一位大佬已经有做过这方面的工作，详情请移步这里：使用HTML5来实现本地文件读取和写入。">
+<meta name="keywords" content="echarts,桑葚图,数据可视化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用Echarts实现数据可视化">
+<meta property="og:url" content="https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog/2019/10/19/js读写本地文件并可视化数据/index.html">
 <meta property="og:site_name" content="CallMejacky&#39;s blog">
-<meta property="og:description" content="This is a blog in order to record my learning and growth.">
+<meta property="og:description" content="最近由于一个特殊的需求，需要利用js读取本地json，然后再通过Echarts可视化出来。之前没有做过js读写本地文件的实验，幸亏看到一位大佬已经有做过这方面的工作，详情请移步这里：使用HTML5来实现本地文件读取和写入。">
 <meta property="og:locale" content="zh-Hans                	//中文，汉字">
+<meta property="og:image" content="https://jack13163.github.io/%20%20%20%09//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog%20同时root设置为/blog/2019/10/19/Pictures/Typora/1571502877004.png">
+<meta property="og:image" content="https://jack13163.github.io/%20%20%20%09//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog%20同时root设置为/blog/2019/10/19/Pictures/Typora/1571503364654.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020004330.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191019235104.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191019235202.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002704.png">
+<meta property="og:updated_time" content="2019-10-19T16:49:52.217Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CallMejacky&#39;s blog">
-<meta name="twitter:description" content="This is a blog in order to record my learning and growth.">
+<meta name="twitter:title" content="利用Echarts实现数据可视化">
+<meta name="twitter:description" content="最近由于一个特殊的需求，需要利用js读取本地json，然后再通过Echarts可视化出来。之前没有做过js读写本地文件的实验，幸亏看到一位大佬已经有做过这方面的工作，详情请移步这里：使用HTML5来实现本地文件读取和写入。">
+<meta name="twitter:image" content="https://jack13163.github.io/%20%20%20%09//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog%20同时root设置为/blog/2019/10/19/Pictures/Typora/1571502877004.png">
   
     <link rel="alternative" href="/atom.xml" title="CallMejacky&#39;s blog" type="application/atom+xml">
   
@@ -161,98 +170,232 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-js读写本地文件并可视化数据" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/03/hexo博客基础信息设置/" class="archive-article-date">
-  	<time datetime="2019-10-02T17:47:57.805Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/03/hexo博客基础信息设置/">hexo博客网站的基本设置</a>
+    <h1 class="article-title" itemprop="name">
+      利用Echarts实现数据可视化
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/10/19/js读写本地文件并可视化数据/" class="archive-article-date">
+  	<time datetime="2019-10-19T11:53:35.918Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近由于一个特殊的需求，需要利用js读取本地json，然后再通过Echarts可视化出来。之前没有做过js读写本地文件的实验，幸亏看到一位大佬已经有做过这方面的工作，详情请移步这里：<a href="https://blog.csdn.net/zdavb/article/details/50266215" target="_blank" rel="noopener">使用HTML5来实现本地文件读取和写入</a>。</p>
+<a id="more"></a>
+
+<h1 id="1-文件读取"><a href="#1-文件读取" class="headerlink" title="1. 文件读取"></a>1. 文件读取</h1><p>在HTML5中可以利用FileReader实现文件读取，html代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;input type=&quot;file&quot; id=&quot;files&quot; style=&quot;display:none&quot; οnchange=&quot;import();&quot;/&gt;</span><br><span class="line">    &lt;input type=&quot;button&quot; id=&quot;import&quot; value=&quot;导入&quot;/&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>首先需要一个file类型的input元素，这里为啥要display:none呢？</p>
+<p>因为这个东西太丑了，所以将其隐藏，通过定义一个button间接调用该元素，真的是大佬，这样的想法都能想到。JS代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//点击导入按钮，使files触发点击事件，然后完成读取文件的操作。</span></span><br><span class="line">$(<span class="string">"#import"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"#files"</span>).click();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">import</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//获取文件浏览器选择的文件对象</span></span><br><span class="line">    <span class="keyword">var</span> selectedFile = <span class="built_in">document</span>.getElementById(<span class="string">"files"</span>).files[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">var</span> name = selectedFile.name;<span class="comment">//读取选中文件的文件名</span></span><br><span class="line">    <span class="keyword">var</span> size = selectedFile.size;<span class="comment">//读取选中文件的大小</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"文件名:"</span>+name+<span class="string">"大小："</span>+size);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//FileReader可以被Chrome、FF和Safari支持</span></span><br><span class="line">	<span class="keyword">var</span> reader = <span class="keyword">new</span> FileReader();</span><br><span class="line">	reader.readAsText(selectedFile);<span class="comment">//读取文件的内容</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//当读取完成之后会回调这个函数，然后此时文件的内容存储到了result中。直接操作即可。</span></span><br><span class="line">	reader.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    	<span class="built_in">console</span>.log(<span class="keyword">this</span>.result);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样，读取本地文件的操作就完成了。虽然ActiveXObject也可以，但是，目前只在IE中才能使用，所以为了兼容其他浏览器，还是不要这样使用了。</p>
+<h1 id="2-写入文件"><a href="#2-写入文件" class="headerlink" title="2.写入文件"></a>2.写入文件</h1><p>在HTML5中，与FileReader相对应的也有一个<strong>FileWriter</strong>。但是，没有找到一个可以用的<strong>FileWriter</strong>的API，而且似乎只有被Chrome支持。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//首先导入一个Js文件</span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"./JS/FileSaver.js"</span> charset=<span class="string">"utf-8"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//HTML中添加一个导出元素</span></span><br><span class="line">&lt;input type=<span class="string">"button"</span> id=<span class="string">"export"</span> value=<span class="string">"导出"</span>/&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//JS文件</span></span><br><span class="line">$(<span class="string">"#export).click(function()&#123;</span></span><br><span class="line"><span class="string">    var content = "</span>这是直接使用HTML5进行导出的<span class="string">";</span></span><br><span class="line"><span class="string">    var blob = new Blob([content], &#123;type: "</span>text/plain;charset=utf<span class="number">-8</span><span class="string">"&#125;);</span></span><br><span class="line"><span class="string">    saveAs(blob, "</span>file.txt<span class="string">");//saveAs(blob,filename)</span></span><br><span class="line"><span class="string">&#125;);</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="3-js读取本地json文件并可视化"><a href="#3-js读取本地json文件并可视化" class="headerlink" title="3. js读取本地json文件并可视化"></a>3. js读取本地json文件并可视化</h1><p>真心向大家推荐echarts，真的很漂亮，不信可以移步至：<a href="https://www.echartsjs.com/examples/zh/index.html" target="_blank" rel="noopener">echarts官网实例</a>。</p>
+<p><img src="../Pictures/Typora/1571502877004.png" alt="1571502877004"></p>
+<p>对于非专业的变成人员，也提供了类似于excel的数据可视化接口，并且看着比excel更加美观，这一功能隐藏在<strong>ECharts</strong>数据可视化实验室中，请点击：<a href="https://tushuo.baidu.com/" target="_blank" rel="noopener">传送门</a>。</p>
+<p><img src="../Pictures/Typora/1571503364654.png" alt="1571503364654"></p>
+<p>接着，点击开始制作即可通过鼠标点击的方式创建图表了。</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020004330.png" alt></p>
+<p>这里，笔者采用的是echarts进行数据的可视化的，下面演示的是绘制桑葚图的过程。比较简单，只是为了出图，所以直接写的静态网页，然后数据定义在一个单独的json文件，动态地加载该文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html style=&quot;height: 100%&quot;&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body style=&quot;height: 100%; margin: 0&quot;&gt;</span><br><span class="line">		</span><br><span class="line">		&lt;input type=&quot;file&quot; id=&quot;files&quot; style=&quot;display:none&quot;/&gt;</span><br><span class="line">		&lt;button id=&quot;openFile&quot; onclick=&quot;openJsonFile()&quot;&gt;打开Json文件&lt;/button&gt;</span><br><span class="line">		&lt;div id=&quot;container&quot; style=&quot;height: 100%&quot;&gt;&lt;/div&gt;</span><br><span class="line">			</span><br><span class="line">		&lt;script type=&quot;text/javascript&quot; src=&quot;jquery-1.9.1.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">		&lt;script type=&quot;text/javascript&quot; src=&quot;echarts.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">			</span><br><span class="line">		&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">			</span><br><span class="line">			function openJsonFile()&#123;</span><br><span class="line">				$(&apos;#files&apos;).click();</span><br><span class="line">				</span><br><span class="line">				//读取本地的json数据</span><br><span class="line">				var inputElement = document.getElementById(&quot;files&quot;);</span><br><span class="line">				inputElement.addEventListener(&quot;change&quot;, handleFiles, false);</span><br><span class="line">				function handleFiles() &#123;</span><br><span class="line">					var selectedFile = document.getElementById(&quot;files&quot;).files[0];//获取读取的File对象</span><br><span class="line">					var name = selectedFile.name;//读取选中文件的文件名</span><br><span class="line">					var size = selectedFile.size;//读取选中文件的大小</span><br><span class="line">					console.log(&quot;文件名:&quot;+name+&quot;大小：&quot;+size);</span><br><span class="line">					var reader = new FileReader();//这里是核心！！！读取操作就是由它完成的。</span><br><span class="line">					reader.readAsText(selectedFile);//读取文件的内容</span><br><span class="line"></span><br><span class="line">					reader.onload = function()&#123;</span><br><span class="line">						console.log(&quot;读取结果：&quot;, this.result);//当读取完成之后会回调这个函数，然后此时文件的内容存储到了result中。直接操作即可。</span><br><span class="line">						console.log(&quot;解析JSON并可视化&quot;);</span><br><span class="line">						let json = JSON.parse(this.result);</span><br><span class="line">						helloEcharts(json);</span><br><span class="line">					&#125;;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">				</span><br><span class="line">			//可视化桑葚图</span><br><span class="line">			function helloEcharts(data)&#123;</span><br><span class="line">				var dom = document.getElementById(&quot;container&quot;);</span><br><span class="line">				var myChart = echarts.init(dom);</span><br><span class="line">				var app = &#123;&#125;;</span><br><span class="line">				option = &#123;</span><br><span class="line">					title: &#123;</span><br><span class="line">						text: &apos;Sankey Diagram&apos;</span><br><span class="line">					&#125;,</span><br><span class="line">					tooltip: &#123;</span><br><span class="line">						trigger: &apos;item&apos;,</span><br><span class="line">						triggerOn: &apos;mousemove&apos;</span><br><span class="line">					&#125;,</span><br><span class="line">					series: [</span><br><span class="line">						&#123;</span><br><span class="line">							type: &apos;sankey&apos;,</span><br><span class="line">							data: data.nodes,</span><br><span class="line">							links: data.links,</span><br><span class="line">							focusNodeAdjacency: &apos;allEdges&apos;,</span><br><span class="line">							itemStyle: &#123;</span><br><span class="line">								normal: &#123;</span><br><span class="line">									borderWidth: 1,</span><br><span class="line">									borderColor: &apos;#aaa&apos;</span><br><span class="line">								&#125;</span><br><span class="line">							&#125;,</span><br><span class="line">							lineStyle: &#123;</span><br><span class="line">								normal: &#123;</span><br><span class="line">									color: &apos;source&apos;,</span><br><span class="line">									curveness: 0.5</span><br><span class="line">								&#125;</span><br><span class="line">							&#125;</span><br><span class="line">						&#125;</span><br><span class="line">					]</span><br><span class="line">				&#125;;</span><br><span class="line">					</span><br><span class="line">				myChart.setOption(option);</span><br><span class="line">					</span><br><span class="line">				if (option &amp;&amp; typeof option === &quot;object&quot;) &#123;</span><br><span class="line">					myChart.setOption(option, true);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&lt;/script&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191019235104.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191019235202.png" alt></p>
+<h1 id="4-CDN加速"><a href="#4-CDN加速" class="headerlink" title="4. CDN加速"></a>4. CDN加速</h1><p>我们知道，对于一个网站来说，网站的访问速度对于用户的访问体验来说是非常重要的。CDN全称为内容分发网络，其主要是加速静态资源，如网站上面上传的图片、媒体，以及引入的一些Js、css等文件。</p>
+<p>CDN加速需要依靠各个网络节点，例如100台CDN服务器分布在全国范围，从上海访问，会从最近的节点返回资源。CDN服务器通过缓存或者主动抓取主服务器的内容来实现资源储备。</p>
+<p>再向大家推荐一个免费的bootstrap等前端框架的CDN加速服务：<a href="https://www.bootcdn.cn/" target="_blank" rel="noopener"><strong>BootCDN</strong></a>。</p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002704.png" alt></p>
+<p>BootCDN 是 <a href="https://www.bootcss.com/" target="_blank" rel="noopener">Bootstrap 中文网</a>支持并维护的前端开源项目免费 CDN 服务，致力于为 Bootstrap、jQuery、Angular、Vuejs 一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。其共收录了 <strong>3442</strong> 个前端开源项目，为各个网站提供一个稳定、快速、免费的前端开源项目 CDN 加速服务，如果您的项目里面要引入bootstrap，使用CDN加速的方式无疑会大大提高您的线上应用的访问速度。</p>
+<p>搜索上一节用到的FileSaver.js，并复制<script>标签得到如下的内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020001706.png" alt=""></p>
+<p>您可以通过以下 API 获取 BootCDN 所加速的所有前端开源库的<strong>文件列表</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.bootcdn.cn/names.json</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002351.png" alt=""></p>
+<p>您还可以通过以下 API 获取 BootCDN 所加速的所有前端开源库的<strong>基本信息</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.bootcdn.cn/libraries.json</span><br></pre></td></tr></table></figure>
+
+<p>该列表是一个 json 数组（Array），数组中的每一个条目含义分别为：</p>
+<ul>
+<li>开源库的名称（name）</li>
+<li>描述（description）</li>
+<li>星标数（stars）</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002112.png" alt=""></p>
+<p>通过下列的API获取某个特定的名称的开源库的详细信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.bootcdn.cn/libraries/[name].json</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002529.png" alt=""></p>
+<p>通过此接口获取到的是开源库的 JSON 对象（Object）格式的详细信息，包括所有版本以及文件列表。<code>[name]</code> 是开源库的名称，可从[开源库简要信息列表]或[开源库名称列表]中获取。其中，<code>assets</code> 属性是所有版本及对应文件的列表。</p>
+</script></p>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">echarts,桑葚图,数据可视化</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog/2019/10/19/js读写本地文件并可视化数据/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/01/使用Typora离线写博客并发布到CSDN/" class="archive-article-date">
-  	<time datetime="2019-10-01T04:40:03.031Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/15/【PostMan】测试Post请求/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【PostMan】测试Post请求</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/01/使用Typora离线写博客并发布到CSDN/">使用Typora离线写博客并发布到CSDN</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-文件读取"><span class="toc-number">1.</span> <span class="toc-text">1. 文件读取</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-写入文件"><span class="toc-number">2.</span> <span class="toc-text">2.写入文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-js读取本地json文件并可视化"><span class="toc-number">3.</span> <span class="toc-text">3. js读取本地json文件并可视化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-CDN加速"><span class="toc-number">4.</span> <span class="toc-text">4. CDN加速</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -275,9 +418,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
