@@ -16,17 +16,17 @@
 <meta property="og:site_name" content="CallMejacky&#39;s blog">
 <meta property="og:description" content="最近由于一个特殊的需求，需要利用js读取本地json，然后再通过Echarts可视化出来。之前没有做过js读写本地文件的实验，幸亏看到一位大佬已经有做过这方面的工作，详情请移步这里：使用HTML5来实现本地文件读取和写入。">
 <meta property="og:locale" content="zh-Hans                	//中文，汉字">
-<meta property="og:image" content="https://jack13163.github.io/%20%20%20%09//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog%20同时root设置为/blog/2019/10/19/Pictures/Typora/1571502877004.png">
-<meta property="og:image" content="https://jack13163.github.io/%20%20%20%09//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog%20同时root设置为/blog/2019/10/19/Pictures/Typora/1571503364654.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020005353.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020005309.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020004330.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191019235104.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191019235202.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002704.png">
-<meta property="og:updated_time" content="2019-10-19T16:49:52.217Z">
+<meta property="og:updated_time" content="2019-10-19T16:56:21.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Echarts实现数据可视化">
 <meta name="twitter:description" content="最近由于一个特殊的需求，需要利用js读取本地json，然后再通过Echarts可视化出来。之前没有做过js读写本地文件的实验，幸亏看到一位大佬已经有做过这方面的工作，详情请移步这里：使用HTML5来实现本地文件读取和写入。">
-<meta name="twitter:image" content="https://jack13163.github.io/%20%20%20%09//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog%20同时root设置为/blog/2019/10/19/Pictures/Typora/1571502877004.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020005353.png">
   
     <link rel="alternative" href="/atom.xml" title="CallMejacky&#39;s blog" type="application/atom+xml">
   
@@ -205,9 +205,9 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//首先导入一个Js文件</span></span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"./JS/FileSaver.js"</span> charset=<span class="string">"utf-8"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//HTML中添加一个导出元素</span></span><br><span class="line">&lt;input type=<span class="string">"button"</span> id=<span class="string">"export"</span> value=<span class="string">"导出"</span>/&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//JS文件</span></span><br><span class="line">$(<span class="string">"#export).click(function()&#123;</span></span><br><span class="line"><span class="string">    var content = "</span>这是直接使用HTML5进行导出的<span class="string">";</span></span><br><span class="line"><span class="string">    var blob = new Blob([content], &#123;type: "</span>text/plain;charset=utf<span class="number">-8</span><span class="string">"&#125;);</span></span><br><span class="line"><span class="string">    saveAs(blob, "</span>file.txt<span class="string">");//saveAs(blob,filename)</span></span><br><span class="line"><span class="string">&#125;);</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="3-js读取本地json文件并可视化"><a href="#3-js读取本地json文件并可视化" class="headerlink" title="3. js读取本地json文件并可视化"></a>3. js读取本地json文件并可视化</h1><p>真心向大家推荐echarts，真的很漂亮，不信可以移步至：<a href="https://www.echartsjs.com/examples/zh/index.html" target="_blank" rel="noopener">echarts官网实例</a>。</p>
-<p><img src="../Pictures/Typora/1571502877004.png" alt="1571502877004"></p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020005353.png" alt></p>
 <p>对于非专业的变成人员，也提供了类似于excel的数据可视化接口，并且看着比excel更加美观，这一功能隐藏在<strong>ECharts</strong>数据可视化实验室中，请点击：<a href="https://tushuo.baidu.com/" target="_blank" rel="noopener">传送门</a>。</p>
-<p><img src="../Pictures/Typora/1571503364654.png" alt="1571503364654"></p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020005309.png" alt></p>
 <p>接着，点击开始制作即可通过鼠标点击的方式创建图表了。</p>
 <p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020004330.png" alt></p>
 <p>这里，笔者采用的是echarts进行数据的可视化的，下面演示的是绘制桑葚图的过程。比较简单，只是为了出图，所以直接写的静态网页，然后数据定义在一个单独的json文件，动态地加载该文件。</p>
