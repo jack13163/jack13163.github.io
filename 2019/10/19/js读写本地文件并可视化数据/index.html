@@ -22,7 +22,11 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191019235104.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191019235202.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002704.png">
-<meta property="og:updated_time" content="2019-10-19T16:56:21.699Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020001706.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002351.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002112.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002529.png">
+<meta property="og:updated_time" content="2019-10-19T16:58:46.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Echarts实现数据可视化">
 <meta name="twitter:description" content="最近由于一个特殊的需求，需要利用js读取本地json，然后再通过Echarts可视化出来。之前没有做过js读写本地文件的实验，幸亏看到一位大佬已经有做过这方面的工作，详情请移步这里：使用HTML5来实现本地文件读取和写入。">
@@ -220,14 +224,14 @@
 <p>再向大家推荐一个免费的bootstrap等前端框架的CDN加速服务：<a href="https://www.bootcdn.cn/" target="_blank" rel="noopener"><strong>BootCDN</strong></a>。</p>
 <p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002704.png" alt></p>
 <p>BootCDN 是 <a href="https://www.bootcss.com/" target="_blank" rel="noopener">Bootstrap 中文网</a>支持并维护的前端开源项目免费 CDN 服务，致力于为 Bootstrap、jQuery、Angular、Vuejs 一样优秀的前端开源项目提供稳定、快速的免费 CDN 加速服务。其共收录了 <strong>3442</strong> 个前端开源项目，为各个网站提供一个稳定、快速、免费的前端开源项目 CDN 加速服务，如果您的项目里面要引入bootstrap，使用CDN加速的方式无疑会大大提高您的线上应用的访问速度。</p>
-<p>搜索上一节用到的FileSaver.js，并复制<script>标签得到如下的内容：</p>
+<p>搜索上一节用到的FileSaver.js，并复制标签得到如下的内容：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020001706.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020001706.png" alt></p>
 <p>您可以通过以下 API 获取 BootCDN 所加速的所有前端开源库的<strong>文件列表</strong>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.bootcdn.cn/names.json</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002351.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002351.png" alt></p>
 <p>您还可以通过以下 API 获取 BootCDN 所加速的所有前端开源库的<strong>基本信息</strong>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.bootcdn.cn/libraries.json</span><br></pre></td></tr></table></figure>
 
@@ -237,13 +241,13 @@
 <li>描述（description）</li>
 <li>星标数（stars）</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002112.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002112.png" alt></p>
 <p>通过下列的API获取某个特定的名称的开源库的详细信息：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.bootcdn.cn/libraries/[name].json</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002529.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/jack13163/GithubPicBed/master/img/20191020002529.png" alt></p>
 <p>通过此接口获取到的是开源库的 JSON 对象（Object）格式的详细信息，包括所有版本以及文件列表。<code>[name]</code> 是开源库的名称，可从[开源库简要信息列表]或[开源库名称列表]中获取。其中，<code>assets</code> 属性是所有版本及对应文件的列表。</p>
-</script></p>
+
       
 
       
