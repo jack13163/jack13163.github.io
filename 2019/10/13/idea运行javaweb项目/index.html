@@ -419,6 +419,22 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog/2019/10/13/idea运行javaweb项目/",
+  owner: 'jack13163',
+  repo: 'jack13163.github.io',
+  oauth: {
+    client_id: 'Iv1.7d015a9ccb7c5f32',
+    client_secret: '63bee613639a49185ad24761614edc3f53d711b5',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
