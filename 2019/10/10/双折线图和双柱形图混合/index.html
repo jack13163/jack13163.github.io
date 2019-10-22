@@ -43,6 +43,7 @@
   
     <link rel="stylesheet" href="/lib/gitalk/gitalk.css">
     <script src="/lib/gitalk/gitalk.min.js"></script>
+    <script src="/lib/gitalk/jquery.md5.js"></script>
   
 </head>
 </html>
@@ -370,7 +371,7 @@
             repo: 'jack13163.github.io',
             owner: 'jack13163',
             admin: ['jack13163'],
-            id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+            id: $.md5(location.pathname),      // Ensure uniqueness and length less than 50
             distractionFreeMode: false  // Facebook-like distraction free mode
         })
  
