@@ -45,6 +45,11 @@
 
   
 
+  
+  
+    <link rel="stylesheet" href="/lib/gitalk/gitalk.css">
+    <script src="/lib/gitalk/gitalk.min.js"></script>
+  
 </head>
 </html>
 <body>
@@ -378,21 +383,24 @@
   
 
   
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "https://jack13163.github.io   	//如果你的网站是放于二级目录，类似于www.iots.vip/blog则请将URL设置为https://www.iots.vip/blog 同时root设置为/blog/2019/10/01/使用Typora离线写博客并发布到CSDN/",
-  owner: 'jack13163',
-  repo: 'jack13163.github.io',
-  oauth: {
-    client_id: '3b646153babd90b24194',
-    client_secret: '8d5f64bad6f45604e147127f010ebd9057011aa2',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
+  
+  
+  <div class="gitalk">
+    <div id="gitalk-container"></div>
+    <script type="text/javascript">
+        const gitalk = new Gitalk({
+            clientID: '3b646153babd90b24194',
+            clientSecret: '8d5f64bad6f45604e147127f010ebd9057011aa2',
+            repo: 'jack13163.github.io',
+            owner: 'jack13163',
+            admin: ['jack13163'],
+            id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+ 
+        gitalk.render('gitalk-container')
+    </script>
+</div>
   
 
 
